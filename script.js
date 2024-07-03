@@ -27,3 +27,18 @@ let uniqueNumber = (array) => (
 //1.d
 result = numbers.reduce((total, current) => total + current, 0);
 console.log(result);
+
+//1.e
+let lessHundred = numbers.filter(function(item){
+    return item <100;
+});
+console.log(lessHundred);
+
+//1.f
+
+let greaterFifty = numbers.filter(function(item){
+    return item > 50;
+});
+console.log(greaterFifty);
+
+//1.g
