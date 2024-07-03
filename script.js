@@ -23,4 +23,7 @@ let uniqueNumber = (array) => (
       arr.indexOf(currentValue) === index
     ))
 );
-console.log(numbers);
+
+//1.d
+result = numbers.reduce((total, current) => total + current, 0);
+console.log(result);
