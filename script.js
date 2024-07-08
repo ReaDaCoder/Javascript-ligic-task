@@ -42,3 +42,19 @@ let greaterFifty = numbers.filter(function(item){
 console.log(greaterFifty);
 
 //1.g
+let dividedNum = numbers.filter(number => number % 2 === 0);
+console.log(dividedNum);
+
+
+//1.i
+ let dividedThreeNum = numbers.filter(number => number % 3 === 0);
+ console.log(dividedThreeNum);
+
+ //1.j
+ let countElements = numbers.length;
+    console.log(countElements);
+
+    //1.k
+    let reversedNum = numbers.slice().reverse();
+    console.log(reversedNum);
+
