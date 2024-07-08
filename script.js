@@ -119,3 +119,61 @@ console.log("Strings Only:", stringsOnly);
 
 //2.c
 >>>>>>> 244bf0d204b64886a3ba010e11058fbaa9cf0dd0
+
+//2.a
+let mixedArray = [7, 10, "Clentan", 13, 89, true, 45, false, "Jerry", "Vukona", "Reabetswe", 600];
+let numbersOnly = [];
+
+for (let i = 0; i < mixedArray.length; i++) {
+    if (typeof mixedArray[i] === 'number') {
+        numbersOnly.push(mixedArray[i]);
+    }
+}
+
+console.log("Numbers Only:", numbersOnly);
+
+//2.b
+let stringsOnly = [];
+let i = 0;
+
+while (i < mixedArray.length) {
+    if (typeof mixedArray[i] === 'string') {
+        stringsOnly.push(mixedArray[i]);
+    }
+    i++;
+}
+
+console.log("Strings Only:", stringsOnly);
+
+//2.c
+let sum = 0;
+let j = 0;
+
+do {
+    if (typeof mixedArray[j] === 'number') {
+        sum += mixedArray[j];
+    }
+    j++;
+} while (j < mixedArray.length);
+
+console.log("Sum of numbers:", sum);
+
+//2.d
+let greeting = "Hello";
+let stringElements = mixedArray.filter(item => typeof item === 'string');
+
+for (let k = 0; k < stringElements.length; k++) {
+    if (k === stringElements.length - 1) {
+        greeting += `, and ${stringElements[k]}.`;
+    } else if (k === stringElements.length - 2) {
+        greeting += `, ${stringElements[k]}`;
+    } else {
+        greeting += `, ${stringElements[k]}`;
+    }
+}
+
+console.log(greeting);
+
+//2.e
+let noStrings = mixedArray.filter(item => typeof item !== 'string');
+console.log("Without strings:", noStrings);
